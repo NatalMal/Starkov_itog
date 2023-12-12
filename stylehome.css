@@ -1,12 +1,15 @@
 body
 {
-    position: absolute;
+  
+
     min-width: 1280px;
     min-height: 960px;
     width: 100%;
     margin: auto;
     background: url('./11111133.jpg') no-repeat scroll;
     background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
     height: 100%;
     color: #fff;
 }
@@ -45,15 +48,27 @@ nav{
 .active{
     font-weight: bold ;
 }
+.A{
+    height: 283px;
+    width: 320px;
+    position: absolute;
+    width: 50%;
+    top: 283px;
+    left: 1035px;
+    margin: 30px;
+ 
+}
 .s
 {
+
+    width: 50%;
     font-weight: 500;
     font-size: 53px;
     line-height:62px ;
 }
 .quote{
     width: 700px;
-    background-color: rgba(34, 32, 32, 0.493);
+    background-color: rgba(34, 32, 32, 0.849);
     font-weight: 600;
     font-size: 0.5em;
     font:bold;
@@ -67,10 +82,11 @@ nav{
 .button-meo
 {
 
-    position: absolute;
     all:unset;
+    font: bold;
+    position: fixed;
     padding: 22px 55px;
-    background: #B79F25;
+    background: #d4b828;
     border-color: #665E33;
     border: 3px ;
     border-radius: 5px;
@@ -81,20 +97,20 @@ nav{
     
     content: '';
     position: absolute;
-    top:53.3%;
-    left: 10.5%;
+    top:1%;
+    left: 0.3%;
     width: 0;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.3);
+    height: 62px;
+    background: rgba(255, 255, 255, 0.336);
     border-radius: 5px;
     transition: all 2s ease;
 }
 .button-meo:hover::before{
-    width: 12.5%;
+    width: 100%;
 
 }
 main{
-    max-width: 1000px;
+    max-width: 100%;
     width: 100%;
     justify-content: center;
 }
@@ -123,6 +139,7 @@ main{
   } 
   .inf
   {
+    all:unset;
     margin: 0px;
     padding: 0px;
     width: 300px;
@@ -131,12 +148,16 @@ main{
     position: absolute;
     bottom: 60px;
     transform: translateX(-100%);
+    transition: 1s;
   }
   .inf p {
     color: #fff;
     padding: 10px;
+    transition: 0.3s;
+    transform: scale(1.0)
   }
-  .inf:after
+
+  .inf::after
   {
     top: 220px;
     content: '⇓';
@@ -148,9 +169,27 @@ main{
     left: 300px;
     transform: rotate(-90deg);
     transform-origin:0 0 ;
+    transition: 1s;
   }
+  .inf:hover::after
+  {
+    top: 220px;
+    content: '⇓';
+    background-color: gray;
+    text-align: center;
+    border-radius:0 0 8px 8px ;
+    width: 220px;
+    position: absolute;
+    left: 300px;
+    transform: rotate(-90deg);
+    transform-origin:0 0 ;
+    transition: 1s;
+  }
+  
   .inf:hover
   {
     transform: translateX(0%);
-    transition: all 0.7s ease;
+  
   }
+
+ 
